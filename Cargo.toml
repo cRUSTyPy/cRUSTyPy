@@ -1,0 +1,6 @@
+[package]
+name = "rust-python"
+version = "0.1.0"
+authors = ["Cameron Dershem <cldershem@gmail.com>"]
+
+[dependencies]
