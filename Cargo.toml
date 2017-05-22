@@ -1,6 +1,11 @@
 [package]
 name = "cRUSTyPy"
 version = "0.1.0"
-authors = ["Cameron Dershem <cldershem@gmail.com>"]
+authors = [
+    "Cameron Dershem <cldershem@gmail.com>",
+    "Yusuke Tsutsumi <yusuke@tsutsumi.io>"
+]
 
 [dependencies]
+peg = "0.5.2"
+peg-syntax-ext = "0.5.2"

@@ -1,0 +1,26 @@
+use super::{Statement, Module};
+
+pub symbol -> String = match_str:$([a-zA-Z][a-zA-Z0-9]*) { match_str.to_owned() }
+
+pub spaces -> usize = s:" "+ { s.len() }
+pub newline -> usize = "\n" { 0 }
+
+pub module -> Module = sl:statement_list { sl }
+
+pub statement -> Statement =
+    s:symbol { Statement::Symbol(Box::new(s)) }
+
+pub statement_list -> Vec<Statement> =
+    s:statement newline sl:statement_list {
+        let mut new_list = Vec::new();
+        new_list.push(s);
+        for next_s in sl {
+            new_list.push(next_s.clone());
+        }
+        new_list
+    }
+    / s:statement {
+        let mut new_list = Vec::new();
+        new_list.push(s);
+        new_list
+    }
