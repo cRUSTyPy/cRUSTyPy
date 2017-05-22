@@ -1,5 +1,5 @@
 [package]
-name = "rust-python"
+name = "cRUSTyPy"
 version = "0.1.0"
 authors = ["Cameron Dershem <cldershem@gmail.com>"]
 
